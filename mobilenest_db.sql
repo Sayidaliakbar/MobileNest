@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2026 at 02:52 PM
+-- Generation Time: Jan 20, 2026 at 02:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `nama_lengkap`, `email`, `no_telepon`, `tanggal_dibuat`) VALUES
 (1, 'admin', '$2y$10$/R8C00S51h0LHoPhf8zYTOawNJAGTc/UbpWB5kv89nExbehqOA8Mi', 'Administrator MobileNest', 'admin@mobilenest.com', '081234567890', '2025-10-23 14:18:47'),
-(2, 'admin1', 'admin12345', 'AdminBesar', 'AdminBesar@gmail.com', '011', '2026-01-07 17:43:54');
+(2, 'admin1', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'AdminBesar', 'AdminBesar@gmail.com', '011', '2026-01-07 17:43:54');
 
 -- --------------------------------------------------------
 
@@ -65,15 +65,7 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `id_produk`, `jumlah`, `harga_satuan`, `subtotal`) VALUES
-(1, 1, 13, 1, 6999000.00, 6999000.00),
-(2, 1, 12, 1, 3499000.00, 3499000.00),
-(3, 1, 7, 1, 19999000.00, 19999000.00),
-(4, 2, 13, 1, 6999000.00, 6999000.00),
-(5, 3, 12, 1, 3499000.00, 3499000.00),
-(6, 4, 13, 1, 6999000.00, 6999000.00),
-(7, 5, 13, 1, 6999000.00, 6999000.00),
-(8, 6, 13, 1, 6999000.00, 6999000.00),
-(9, 7, 13, 1, 6999000.00, 6999000.00);
+(10, 8, 6, 1, 12999000.00, 12999000.00);
 
 -- --------------------------------------------------------
 
@@ -129,7 +121,8 @@ INSERT INTO `pengiriman` (`id_pengiriman`, `id_user`, `no_pengiriman`, `nama_pen
 (4, 5, 'SHIP-20260108104025-15425', 'salabim', '12214124124', 'salambim@example.com', 'Testing', 't', 't', '65213', 'Testing2', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-08 16:40:25', NULL, NULL, '2026-01-08 09:40:25', '2026-01-08 09:40:25'),
 (5, 5, 'SHIP-20260108110214-44252', 'salabim', '12214124124', 'salambim@example.com', 'Testing', 'Testing', 'Testing', '11111', 'Testing', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-08 17:02:14', NULL, NULL, '2026-01-08 10:02:14', '2026-01-08 10:02:14'),
 (6, 5, 'SHIP-20260108110909-63289', 'salabim', '12214124124', 'salambim@example.com', 'Testing', 'Testing', 'Testing', '11111', 'Testing', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-08 17:09:09', NULL, NULL, '2026-01-08 10:09:09', '2026-01-08 10:09:09'),
-(7, 5, 'SHIP-20260108113733-45063', 'salabim', '12214124124', 'salambim@example.com', 'Testing', 'Testing', 'Testing', '11111', 't', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-08 17:37:33', '2026-01-08 19:47:52', NULL, '2026-01-08 10:37:33', '2026-01-08 12:47:52');
+(7, 5, 'SHIP-20260108113733-45063', 'salabim', '12214124124', 'salambim@example.com', 'Testing', 'Testing', 'Testing', '11111', 't', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-08 17:37:33', '2026-01-08 19:47:52', NULL, '2026-01-08 10:37:33', '2026-01-08 12:47:52'),
+(8, 97, 'SHIP-20260120133716-90411', 'Sayid Ali Akbar', '087657383638', 'Sayidaliakbar@gmail.com', 'Jawa ireng', 'ngawi', 'ngawi', '67676', 'ngawi', 'regular', 20000, '', 'Menunggu Pickup', '2026-01-20 19:37:16', '2026-01-20 19:39:36', NULL, '2026-01-20 12:37:16', '2026-01-20 12:39:36');
 
 -- --------------------------------------------------------
 
@@ -156,19 +149,17 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `merek`, `deskripsi`, `spesifikasi`, `harga`, `stok`, `gambar`, `kategori`, `status_produk`, `tanggal_ditambahkan`) VALUES
-(1, 'Samsung Galaxy S23', 'Samsung', 'Smartphone flagship dengan kamera 50MP dan layar Dynamic AMOLED', 'RAM 8GB, Storage 256GB, Battery 3900mAh', 12999000.00, 15, NULL, 'Flagship', 'Tersedia', '2025-10-23 14:18:47'),
-(2, 'iPhone 14 Pro', 'Apple', 'iPhone terbaru dengan chip A16 Bionic dan Dynamic Island', 'RAM 6GB, Storage 128GB, iOS 16', 16999000.00, 10, NULL, 'Flagship', 'Tersedia', '2025-10-23 14:18:47'),
-(3, 'Xiaomi Redmi Note 12', 'Xiaomi', 'Smartphone mid-range dengan performa tinggi', 'RAM 6GB, Storage 128GB, Battery 5000mAh', 2999000.00, 25, NULL, 'Mid-Range', 'Tersedia', '2025-10-23 14:18:47'),
-(4, 'OPPO Reno 8', 'OPPO', 'Smartphone dengan kamera portrait terbaik', 'RAM 8GB, Storage 256GB, Battery 4500mAh', 5999000.00, 20, NULL, 'Mid-Range', 'Tersedia', '2025-10-23 14:18:47'),
-(5, 'Vivo V27 5G', 'Vivo', 'Smartphone 5G dengan layar AMOLED 120Hz', 'RAM 12GB, Storage 256GB, Battery 4600mAh', 4999000.00, 18, NULL, 'Mid-Range', 'Tersedia', '2025-10-23 14:18:47'),
-(6, 'Samsung Galaxy S23', 'Samsung', 'Smartphone flagship Samsung dengan performa tinggi dan kamera canggih', 'Processor: Snapdragon 8 Gen 2, RAM: 8GB, Storage: 256GB, Display: 6.1 inch AMOLED 120Hz', 12999000.00, 13, 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhUSEhAVFRUVFRcVFRUVFxUVFRcVFhUWFhUVFRUYHSggGBolHRUWITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAPFi0dHR0tLS0uKy0tKystLSsrLS0tLS0vKy0rLS0tKy0tKy0tLS0tLS0tLS0tLS03KystLSstK//AABEIAOEA4AMBIgACEQEDEQH/', 'Flagship', 'Tersedia', '2025-10-30 15:57:10'),
-(7, 'iPhone 15 Pro', 'Apple', 'iPhone terbaru dengan chip A17 Pro dan fitur kamera revolusioner', 'Processor: A17 Pro, RAM: 8GB, Storage: 256GB, Display: 6.1 inch Super Retina XDR', 19999000.00, 8, NULL, 'Flagship', 'Tersedia', '2025-10-30 15:57:10'),
-(8, 'Xiaomi 13', 'Xiaomi', 'Smartphone Xiaomi dengan Snapdragon terbaru dan layar AMOLED', 'Processor: Snapdragon 8 Gen 2, RAM: 12GB, Storage: 256GB, Display: 6.36 inch AMOLED', 7999000.00, 20, NULL, 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
-(9, 'Oppo A57', 'Oppo', 'Smartphone budget dengan baterai besar dan performa standar', 'Processor: Snapdragon 680, RAM: 4GB, Storage: 64GB, Display: 6.56 inch LCD', 3999000.00, 7, '', 'Budget', 'Tersedia', '2025-10-30 15:57:10'),
-(10, 'Vivo Y77', 'Vivo', 'Smartphone Vivo dengan kamera bagus dan desain modern', 'Processor: Snapdragon 680, RAM: 8GB, Storage: 128GB, Display: 6.64 inch LCD', 5999000.00, 18, NULL, 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
-(11, 'Samsung Galaxy A54', 'Samsung', 'Galaxy A series dengan fitur lengkap dan harga terjangkau', 'Processor: Exynos 1280, RAM: 6GB, Storage: 128GB, Display: 6.5 inch AMOLED', 5999000.00, 22, NULL, 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
-(12, 'Xiaomi Redmi Note 13', 'Xiaomi', 'Redmi Note dengan spesifikasi tangguh dan baterai besar', 'Processor: Snapdragon 685, RAM: 4GB, Storage: 128GB, Display: 6.67 inch IPS LCD', 3499000.00, 30, NULL, 'Budget', 'Tersedia', '2025-10-30 15:57:10'),
-(13, 'Oppo Reno 8', 'Oppo', 'Reno series dengan kamera portrait dan design premium', 'Processor: Snapdragon 778G+, RAM: 8GB, Storage: 256GB, Display: 6.43 inch AMOLED', 6999000.00, 16, NULL, 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10');
+(2, 'iPhone 14 Pro', 'Apple', 'iPhone terbaru dengan chip A16 Bionic dan Dynamic Island', 'RAM 6GB, Storage 128GB, iOS 16', 16999000.00, 10, 'produk_2_1768912261_d81d65ad.jpg', 'Flagship', 'Tersedia', '2025-10-23 14:18:47'),
+(3, 'Xiaomi Redmi Note 12', 'Xiaomi', 'Smartphone mid-range dengan performa tinggi', 'RAM 6GB, Storage 128GB, Battery 5000mAh', 2999000.00, 25, 'produk_3_1768912341_07c564bd.jpg', 'Mid-Range', 'Tersedia', '2025-10-23 14:18:47'),
+(5, 'Vivo V27 5G', 'Vivo', 'Smartphone 5G dengan layar AMOLED 120Hz', 'RAM 12GB, Storage 256GB, Battery 4600mAh', 4999000.00, 18, 'produk_5_1768912400_346ad0d4.jpg', 'Mid-Range', 'Tersedia', '2025-10-23 14:18:47'),
+(6, 'Samsung Galaxy S23', 'Samsung', 'Smartphone flagship Samsung dengan performa tinggi dan kamera canggih', 'Processor: Snapdragon 8 Gen 2, RAM: 8GB, Storage: 256GB, Display: 6.1 inch AMOLED 120Hz', 12999000.00, 13, 'produk_6_1768910965_3549b05f.jpg', 'Flagship', 'Tersedia', '2025-10-30 15:57:10'),
+(7, 'iPhone 15 Pro', 'Apple', 'iPhone terbaru dengan chip A17 Pro dan fitur kamera revolusioner', 'Processor: A17 Pro, RAM: 8GB, Storage: 256GB, Display: 6.1 inch Super Retina XDR', 19999000.00, 8, 'produk_7_1768912302_73236ead.jpg', 'Flagship', 'Tersedia', '2025-10-30 15:57:10'),
+(8, 'Xiaomi 13', 'Xiaomi', 'Smartphone Xiaomi dengan Snapdragon terbaru dan layar AMOLED', 'Processor: Snapdragon 8 Gen 2, RAM: 12GB, Storage: 256GB, Display: 6.36 inch AMOLED', 7999000.00, 20, 'produk_8_1768911055_e111e882.webp', 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
+(9, 'Oppo A57', 'Oppo', 'Smartphone budget dengan baterai besar dan performa standar', 'Processor: Snapdragon 680, RAM: 4GB, Storage: 64GB, Display: 6.56 inch LCD', 3999000.00, 7, 'produk_9_1768911704_9f3bc6f9.webp', 'Budget', 'Tersedia', '2025-10-30 15:57:10'),
+(10, 'Vivo Y77', 'Vivo', 'Smartphone Vivo dengan kamera bagus dan desain modern', 'Processor: Snapdragon 680, RAM: 8GB, Storage: 128GB, Display: 6.64 inch LCD', 5999000.00, 18, 'produk_10_1768911791_a3fdda18.jpg', 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
+(11, 'Samsung Galaxy A54', 'Samsung', 'Galaxy A series dengan fitur lengkap dan harga terjangkau', 'Processor: Exynos 1280, RAM: 6GB, Storage: 128GB, Display: 6.5 inch AMOLED', 5999000.00, 22, 'produk_11_1768911817_66616e0f.jpg', 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10'),
+(12, 'Xiaomi Redmi Note 13', 'Xiaomi', 'Redmi Note dengan spesifikasi tangguh dan baterai besar', 'Processor: Snapdragon 685, RAM: 4GB, Storage: 128GB, Display: 6.67 inch IPS LCD', 3499000.00, 30, 'produk_12_1768912180_13132d9a.jpg', 'Budget', 'Tersedia', '2025-10-30 15:57:10'),
+(13, 'Oppo Reno 8', 'Oppo', 'Reno series dengan kamera portrait dan design premium', 'Processor: Snapdragon 778G+, RAM: 8GB, Storage: 256GB, Display: 6.43 inch AMOLED', 6999000.00, 16, 'produk_13_1768912229_6d216631.jpg', 'Mid-Range', 'Tersedia', '2025-10-30 15:57:10');
 
 -- --------------------------------------------------------
 
@@ -224,13 +215,7 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `total_harga`, `status_pesanan`, `metode_pembayaran`, `alamat_pengiriman`, `no_resi`, `tanggal_transaksi`, `tanggal_diperbarui`, `kode_transaksi`, `catatan_user`, `bukti_pembayaran`, `ekspedisi`, `no_resi_awal`) VALUES
-(1, 5, 30517000.00, '', '', 'Jln.Los santos No 4B, nanggulo, Los santos, Los angeles 65213', NULL, '2026-01-08 08:45:04', '2026-01-08 08:45:04', 'TRX-20260108094504-45880', '', NULL, NULL, NULL),
-(2, 5, 7099000.00, '', '', 'los santos, nanggulo, Los santos, Los angeles 22213', NULL, '2026-01-08 09:11:53', '2026-01-08 09:11:53', 'TRX-20260108101153-92998', '', NULL, NULL, NULL),
-(3, 5, 3519000.00, '', '', 'Jln.Testing123, Testing, Testing, Testing 11111', NULL, '2026-01-08 09:21:13', '2026-01-08 09:21:13', 'TRX-20260108102113-61438', '', NULL, NULL, NULL),
-(4, 5, 7019000.00, '', '', 'Testing2, t, t, Testing 65213', NULL, '2026-01-08 09:40:25', '2026-01-08 09:40:25', 'TRX-20260108104025-79844', '', NULL, NULL, NULL),
-(5, 5, 7019000.00, '', '', 'Testing, Testing, Testing, Testing 11111', NULL, '2026-01-08 10:02:14', '2026-01-08 10:02:14', 'TRX-20260108110214-88958', '', NULL, NULL, NULL),
-(6, 5, 7019000.00, '', '', 'Testing, Testing, Testing, Testing 11111', NULL, '2026-01-08 10:09:09', '2026-01-08 10:09:09', 'TRX-20260108110909-33389', '', NULL, NULL, NULL),
-(7, 5, 7019000.00, '', 'bank_transfer', 't, Testing, Testing, Testing 11111', NULL, '2026-01-08 10:37:33', '2026-01-08 12:47:52', 'TRX-20260108113733-72620', '', 'pembayaran_5_1767876472.png', NULL, NULL);
+(8, 97, 13019000.00, 'Selesai', 'bank_transfer', 'ngawi, ngawi, ngawi, Jawa ireng 67676', '1767884486', '2026-01-20 12:37:16', '2026-01-20 12:41:22', 'TRX-20260120133716-74243', '', 'pembayaran_8_1768912776_d53fa492.png', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -282,7 +267,8 @@ INSERT INTO `users` (`id_user`, `username`, `password`, `nama_lengkap`, `email`,
 (86, 'Zyruss', '$2y$10$qCivZeRtoo//YBR1RG7ISOyKb/dEEZwSw2jJO5T4YaMApWxB3fEe2', 'Zyrus', 'Zyruss@gmail.com', NULL, NULL, '2025-12-30 22:09:41', 'Aktif'),
 (94, 'guest_1767698518_322', '$2y$10$q9CJjuOA1d9GqIZ7XGj83uVDHbti1GLQds4Qs87OnfhPemv.B7Sta', 'Guest Shopper', 'guest_1767698518_322@temp.local', NULL, NULL, '2026-01-06 11:21:58', 'Aktif'),
 (95, 'guest_1767807645_389', '$2y$10$3nV0xuVjiXiEfQ6lj45lZOS3CgTF5f0k9ogdagmTqRJyZ2j4qflyG', 'Guest Shopper', 'guest_1767807645_389@temp.local', NULL, NULL, '2026-01-07 17:40:46', 'Aktif'),
-(96, 'guest_1767812495_349', '$2y$10$34Y62yMia5B5.cLfRaBv/uaHjfb2rzJU6CpBnN3g0vipXjwtrJ1QC', 'Guest Shopper', 'guest_1767812495_349@temp.local', NULL, NULL, '2026-01-07 19:01:35', 'Aktif');
+(96, 'guest_1767812495_349', '$2y$10$34Y62yMia5B5.cLfRaBv/uaHjfb2rzJU6CpBnN3g0vipXjwtrJ1QC', 'Guest Shopper', 'guest_1767812495_349@temp.local', NULL, NULL, '2026-01-07 19:01:35', 'Aktif'),
+(97, 'Sayidaliakbar', '$2y$10$45/HlPCb/3P.oBP19SbbDuxpXzW5XmCr6fJibiZKzRGziHiNF7qvy', 'Sayid Ali Akbar', 'Sayidaliakbar@gmail.com', NULL, NULL, '2026-01-20 12:13:00', 'Aktif');
 
 --
 -- Indexes for dumped tables
@@ -384,19 +370,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id_keranjang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_keranjang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `produk`
@@ -414,7 +400,7 @@ ALTER TABLE `promo`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ulasan`
@@ -426,7 +412,7 @@ ALTER TABLE `ulasan`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- Constraints for dumped tables

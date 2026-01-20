@@ -7438,3 +7438,39 @@
 [2026-01-20 14:03:36] Using logged-in user ID: 2
 [2026-01-20 14:03:36] Final user_id: 2
 [2026-01-20 14:03:36] Action: count
+[2026-01-20 14:18:38] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:18:38] Getting current user ID...
+[2026-01-20 14:18:38] get_user_info() returned: null
+[2026-01-20 14:18:38] No user found
+[2026-01-20 14:18:38] Final user_id: 
+[2026-01-20 14:18:38] ERROR: Failed to get user_id
+[2026-01-20 14:18:38] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:18:38] Getting current user ID...
+[2026-01-20 14:18:38] get_user_info() returned: null
+[2026-01-20 14:18:38] No user found
+[2026-01-20 14:18:38] Final user_id: 
+[2026-01-20 14:18:38] ERROR: Failed to get user_id
+[2026-01-20 14:18:54] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:18:54] Getting current user ID...
+[2026-01-20 14:18:54] get_user_info() returned: {"id":97,"role":"user","username":"Sayid Ali Akbar"}
+[2026-01-20 14:18:54] Using logged-in user ID: 97
+[2026-01-20 14:18:54] Final user_id: 97
+[2026-01-20 14:18:54] Action: count
+[2026-01-20 14:18:54] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:18:54] Getting current user ID...
+[2026-01-20 14:18:54] get_user_info() returned: {"id":97,"role":"user","username":"Sayid Ali Akbar"}
+[2026-01-20 14:18:54] Using logged-in user ID: 97
+[2026-01-20 14:18:54] Final user_id: 97
+[2026-01-20 14:18:54] Action: count
+[2026-01-20 14:37:53] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:37:53] Getting current user ID...
+[2026-01-20 14:37:53] get_user_info() returned: null
+[2026-01-20 14:37:53] No user found
+[2026-01-20 14:37:53] Final user_id: 
+[2026-01-20 14:37:53] ERROR: Failed to get user_id
+[2026-01-20 14:37:53] === NEW REQUEST === {"action":"count"}
+[2026-01-20 14:37:53] Getting current user ID...
+[2026-01-20 14:37:53] get_user_info() returned: null
+[2026-01-20 14:37:53] No user found
+[2026-01-20 14:37:53] Final user_id: 
+[2026-01-20 14:37:53] ERROR: Failed to get user_id
