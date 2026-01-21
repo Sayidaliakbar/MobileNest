@@ -7474,3 +7474,15 @@
 [2026-01-20 14:37:53] No user found
 [2026-01-20 14:37:53] Final user_id: 
 [2026-01-20 14:37:53] ERROR: Failed to get user_id
+[2026-01-21 01:49:21] === NEW REQUEST === {"action":"count"}
+[2026-01-21 01:49:21] Getting current user ID...
+[2026-01-21 01:49:21] get_user_info() returned: null
+[2026-01-21 01:49:21] No user found
+[2026-01-21 01:49:21] Final user_id: 
+[2026-01-21 01:49:21] ERROR: Failed to get user_id
+[2026-01-21 01:49:21] === NEW REQUEST === {"action":"count"}
+[2026-01-21 01:49:21] Getting current user ID...
+[2026-01-21 01:49:21] get_user_info() returned: null
+[2026-01-21 01:49:21] No user found
+[2026-01-21 01:49:21] Final user_id: 
+[2026-01-21 01:49:21] ERROR: Failed to get user_id
